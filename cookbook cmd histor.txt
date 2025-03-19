@@ -1,0 +1,94 @@
+  sudo apt install chef-workstation_0.4.2-1_amd64.deb -y
+   67  sudo dpkg -i chef-workstation_0.4.2-1_amd64.deb -y
+   68  sudo dpkg -i chef-workstation_0.4.2-1_amd64.deb
+   69  chef -v
+   70  mkdir cookbooks
+   71  ls
+   72  cd cookbooks
+   73  ls
+   74  chef generate cookbook test-cookbook
+   75  ls
+   76  tree
+   77  sudo apt remove tree
+   78  tree
+   79  sudo apt install tree
+   80  tree
+   81  ls
+   82  cd test-cookbook/
+   83  chef generate test-recipe
+   84  tree
+   85  chef generate recipe test-recipe
+   86  tree
+   87  cd ..
+   88  vi test-cookbook/recipes/test-recipe.rb
+   89  chef exec ruby -c test-cookbook/recipes/test-recipe.rb
+   90  chef-clinet -zr "recipe[test-cookbook::test-recipe]"
+   91  chef-client -zr "recipe[test-cookbook::test-recipe]"
+   92  sudo chef-client -zr "recipe[test-cookbook::test-recipe]"
+   93  ls /
+   94  chef-client -zr "recipe[test-cookbook::test-recipe]"
+   95  sudo chef-client -zr "recipe[test-cookbook::test-recipe]"
+   96  ls
+   97  ls /
+   98  cat /myfile
+   99  sudo chef-client -zr "recipe[test-cookbook::test-recipe]"
+  100  vi test-cookbook/recipes/test-recipe.rb
+  101  sudo chef-client -zr "recipe[test-cookbook::test-recipe]"
+  102  cat /myfile
+  103  ls
+  104  cd test-cookbook/
+  105  chef generate recipe recipe2
+  106  cd ..
+  107  ls
+  108  vi test-cookbook/recipes/recipe2.rb
+  109  chef-client -zr "recipe[test-cookbook::recipe2]"
+  110  sudo chef-client -zr "recipe[test-cookbook::recipe2]"
+  111  sudo apt remove tree -y
+  112  sudo chef-client -zr "recipe[test-cookbook::recipe2]"
+  113  tree
+  114  ls
+  115  chef generate cookbook apache-cookbook
+  116  ls
+  117  cd apache-cookbook/
+  118  chef generate recipe apache-recipe
+  119  tree
+  120  cd ..
+  121  vi apache-cookbook/recipes/apache-recipe.rb
+  122  ]chef exec ruby -c apache-cookbook/recipes/apache-recipe.rb
+  123  ]sudo chef exec ruby -c apache-cookbook/recipes/apache-recipe.rb
+  124  chef -v
+  125  ]sudo chef exec ruby -c apache-cookbook/recipes/apache-recipe.rb
+  126  tree
+  127  ]sudo chef exec ruby -c apache-cookbook/recipes/apache-recipe.rb
+  128  chef exec ruby -c apache-cookbook/recipes/apache-recipe.rb
+  129  chef exec ruby -c apache-cookbook/recipes/apache-recipe.rb
+  130  sudo chef-client -zr "recipe[apache-cookbook::apache-recipe]"
+  131  vi apache-cookbook/recipes/apache-recipe.rb
+  132  sudo chef-client -zr "recipe[apache-cookbook::apache-recipe]"
+  133  ifconfig
+  134  vi apache-cookbook/recipes/apache-recipe.rb
+  135  sudo chef-client -zr "recipe[apache-cookbook::apache-recipe]"
+  136  chef exec ruby -c apache-cookbook/recipes/apache-recipe.rb
+  137  exit
+  138  whoami
+  139  hostname
+  140  apt install tree
+  141  sudo apt install tree
+  142  tree
+  143  ls
+  144  ls -la
+  145  sudo passwd root
+  146  su -
+  147  exit
+  148  su - root
+  149  sudo locale-gen en_US.UTF-8
+  150  sudo update-locale LANG=en_US.UTF-8
+  151  locale
+  152  ls
+  153  cd Desktop/
+  154  ls
+  155  cd cookbooks/
+  156  sudo chef-client -zr "recipe[apache-cookbook::apache-recipe]"
+  157  ip config
+  158  ifconfig
+  159  history
