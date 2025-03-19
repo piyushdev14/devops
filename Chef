@@ -1,4 +1,7 @@
 it is a configruration management tool or provisiong tool
+
+             we also call as infrastructure as code.
+
     push based.                                           pull based.
 
                                   steps to downlaod the chef in workspace.
@@ -87,3 +90,30 @@ end
 chef exec ruby -c apache-cookbook /recipe/apache-recipe.rb
 
 chef-client -zr "recipe[test-cookbook::apache-recipe]" 
+
+                           keywords
+
+Resource - it is the basic component of a recipe used to manage the infra with
+different  kind of states there can be multiple resources in a recipe which 
+will help in configuring and managing the infrastructure 
+for eg - iac
+
+package- manages the packages ona node
+service - manages the service on a node
+user - manage the user on the node
+group - manage group
+template - manage the files with embedded ruby template
+cookbook file - transfer the files from the files subdirectory in the cookbook
+to the location on the node
+file - manage the content of a file on the node
+execute - execute the commands on the node
+cron - edits an existing cron file on the node
+directory - manage the directory on the node.
+
+                            
+
+
+
+
+
+
