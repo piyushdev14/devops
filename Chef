@@ -1,0 +1,89 @@
+it is a configruration management tool or provisiong tool
+    push based.                                           pull based.
+
+                                  steps to downlaod the chef in workspace.
+
+go to chef donwlaod. 
+there you get the url.
+wger <paste the url>
+sudo apt install <chef-workstation>
+which chef
+chef --version
+
+cookbook is a collection of recipe and some other files and folder.
+inside cookbook
+chefignore like gitignore
+kitchen yml - for testing cookbook
+metadata rb(tell ruby ) - name version author etc of cookbook
+      recipe.rb
+readme.md
+recipe - where you write code
+test - for integration testing
+
+lab steps
+which chef
+mkdir cookbook
+ls
+cd cookbooks/
+chef generarte cookbook test-cookbook
+atp install tree -y
+tree
+
+chef generate cookbook xyz
+chef generate recipe xyz
+cd test-cookbook/
+chef generate recipe <name>
+vi test-cookbook/recipes/test-recipe.rb
+tree
+
+  file '/myfile' do
+  content 'Welcome to Technical Guftgu'
+  action :create
+  end
+
+  chef spec ruby -c test-cookbook/recipes test-recipe.rb
+
+  syntax is ok then good otherwise check
+
+  chef-client -zr ""recipe-cookbook::
+                            test-recipe]"
+    ls /
+
+
+                              create and write second recipe
+
+package 'tree' do
+action :install
+end
+
+file '/myfile2' do
+content 'This is My Second Project code'
+action :create
+owner 'root'
+group 'root'
+end 
+
+                              to test 
+chef-client -zr "recipe[test-cookbook::recipe2]"
+cat /myfile2
+apt remove tree -y
+chef-client -zr "recipe[test-cookbook::recipe2]" 
+
+
+package 'httpd' do
+action :install
+end
+
+file '/var/www/html/index.html' do
+content 'Welcome to Technical Guftgu'
+action :create
+end
+
+
+service 'httpd' do
+action [:enable, :start]
+end
+
+chef exec ruby -c apache-cookbook /recipe/apache-recipe.rb
+
+chef-client -zr "recipe[test-cookbook::apache-recipe]" 
