@@ -8,7 +8,7 @@ it is a configruration management tool or provisiong tool
 
 go to chef donwlaod. 
 there you get the url.
-wger <paste the url>
+wget <paste the url>
 sudo apt install <chef-workstation>
 which chef
 chef --version
@@ -110,7 +110,20 @@ execute - execute the commands on the node
 cron - edits an existing cron file on the node
 directory - manage the directory on the node.
 
-                            
+                      chef attribute
+attribute is key value pair of something of a particular data.
+# Types of attribute
+   - default  (lowest priority)     
+   - force default                    lower
+   - normal                             to
+   - override                         higher
+   - force - override
+   - automatic  (highest priority)
+
+
+attribute define by ohie has the highest priority
+
+
 
 
 
