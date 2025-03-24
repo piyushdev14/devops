@@ -119,14 +119,44 @@ attribute is key value pair of something of a particular data.
    - override                         higher
    - force - override
    - automatic  (highest priority)
-
+ 
 
 attribute define by ohie has the highest priority
 
+we declare variable in cookbook using #
+ for ex
+ file '/basicinfo' do
+ content "This is to get Attributes
+ HOSTNAME: #{node['hostname']}
+ IPADDRESS: #{node['ipaddress']}
+ CPU: #{node['cpu']['0']['mhz']}
+ MEMORY: #{node['memory']['total']}"
+ owner 'root'
+ group 'root'
+ action :create
+ end
 
+tyep ohai in cmd.
+ohai ipaddress - gives ip address.
+ohai hostname - gives hostname.
 
+Ohai is a tool in Chef Infra that gathers system 
+information about the node. It collects details like:
+✅ CPU, Memory, Disk, Network, OS details
+✅ Installed packages and running processes
+✅ Cloud metadata (AWS, Azure, etc.)
 
+Chef uses Ohai to generate automatic attributes, 
+which are available in recipes.
 
+A node in Chef is any system (server, VM, container, etc.) that 
+is managed by the Chef Infra Client.
 
+Types of Nodes:
+Physical or Virtual Machines (e.g., Ubuntu, Windows Server)
+
+Cloud Instances (AWS EC2, Azure VM)
+
+Containers (Docker, Kubernetes Pods)
 
 
