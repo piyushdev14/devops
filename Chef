@@ -159,6 +159,8 @@ Cloud Instances (AWS EC2, Azure VM)
 
 Containers (Docker, Kubernetes Pods)
 
-runlist 
+runlist -- the recipes which will in line with the default recipe to execute is known as runlist
+
+convergence - to execute all recipes and run is known as convergence.
 
 
