@@ -172,7 +172,7 @@ content 'Hello World from earth'
 action :create                                                                                                                                                                                                                                                                                      action :create
 end
 
-**/to run linux command but it is not idempotent
+**/to run linux command but it is not idempotent  (and if you are using wsl make sure using sudo).
 execute "run a script" do  
 command <<-EOH  
 mkdir /piyushdir 
@@ -189,4 +189,12 @@ action :create
 members 'rajput' 
 append true   
 end  
+
+
+sudo chef exec ruby -c test-cookbook/recipes/test-recipe.rb (to check if there is any syntax error).
+output : ok syntax.
+
+sudo chef-client -zr "recipe[test-cookbook::test-recipe]" 
+     ***/to execute the scipt file and it execute the instruction./***
+
 
