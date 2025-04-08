@@ -191,10 +191,17 @@ append true
 end  
 
 
-sudo chef exec ruby -c test-cookbook/recipes/test-recipe.rb (to check if there is any syntax error).
+sudo chef exec ruby -c test-cookbook/recipes/test-recipe.rb || (to check if there is any syntax error).
 output : ok syntax.
 
 sudo chef-client -zr "recipe[test-cookbook::test-recipe]" 
      ***/to execute the scipt file and it execute the instruction./***
+
+                HOW TO RUN MULTIPLE RECIPES IN COOKBOOK
+
+sudo chef-client -zr "recipe[test-cookbook::test-recipe]" ,"recipe[apache-cookbook::apa-recipe]",and many more 
+just after "," remember that is only apply for different cookbook it is not aplicable for same recipe for 
+the different cookbook.  
+
 
 
