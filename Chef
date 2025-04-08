@@ -204,4 +204,11 @@ just after "," remember that is only apply for different cookbook it is not apli
 the different cookbook.  
 
 
+        HOW TO RUN MULTIPLE RECIPES OF SAME COOKBOOK
+we need to add recipe by using vi and include recipes 
+1st - we use vi test-recipe/recipes/default.rb
+2nd - include_recipe "test_cookbook::test-recipe"
+3rd - include_recipe "test-cookbook::recipe2"
+4th - chef-client -zr "[test-recipe::default.rb]"
+
 
